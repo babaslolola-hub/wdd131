@@ -1,6 +1,9 @@
 body {
     font-family: "Roboto", sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
 }
+
 
 h1,
 h2 {
@@ -154,11 +157,7 @@ footer {
         grid-column: 1;
     }
 }
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: #f2f2f2;
-}
+
 .card ul {
     margin-top: 2rem;
 }
