@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
 .card img {
     width: 180px;
     height: auto;
