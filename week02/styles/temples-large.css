@@ -1,0 +1,14 @@
+@media (min-width: 640px) {
+    section{
+grid-template-columns: 1fr 1fr 1fr;
+ }
+ nav ul{
+    display: flex;
+ }
+ #menu-button{
+    display: none;
+ }
+ nav {
+    display: flex;
+}
+}
