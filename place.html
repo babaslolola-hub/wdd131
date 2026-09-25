@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abuja, Nigeria</title>
+    <meta name="author" content="Babalola Gbenga">
+    <meta name="description"
+        content="Explore Abuja, Nigeria, including key facts, population, area, weather conditions, temperature, and wind information.">
+    <link rel="stylesheet" href="week03/styles/place.css">
+    <script src="week03/scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Abuja, Nigeria</h1>
+    </header>
+    <main>
+        <img src="week03/images/abuja-small.webp"
+            srcset="week03/images/abuja-small.webp 750w, week03/images/abuja-medium.webp 1500w, week03/images/abuja.webp 3000w"
+            sizes="(max-width: 767px) 100vw, 50vw" width="750" alt="Abuja, Nigeria">
+        <div>
+            <section>
+                <h2>Data</h2>
+                <dl>
+                    <dt>Area:</dt>
+                    <dd>7,315 km²</dd>
+                    <dt>Population:</dt>
+                    <dd>3,564,126</dd>
+                    <dt>Territory:</dt>
+                    <dd>Federal Capital Territory</dd>
+                    <dt>Official Language:</dt>
+                    <dd>English</dd>
+                    <dt>Currency:</dt>
+                    <dd>Naira</dd>
+                </dl>
+            </section>
+            <section>
+                <h2 class="weather">Weather<img src="week03/images/sun.svg" width="64" height="64" alt="Sunny"></h2>
+                <dl>
+                    <dt>Temperature:</dt>
+                    <dd>29&deg;C</dd>
+                    <dt>Conditions:</dt>
+                    <dd>Partly Cloudy</dd>
+                    <dt>Wind:</dt>
+                    <dd>8 km/h</dd>
+                    <dt>Wind Chill:</dt>
+                    <dd id="windchill">
+                    </dd>
+                </dl>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <p>Copyright &copy; <span id="year"></span> Babalola</p>
+        <p>Last Modified: <span id="LastModified"></span></p>
+    </footer>
+</body>
+
+</html>
