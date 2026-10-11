@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FleetSafe | Forklift Inspection</title>
+    <meta name="description"
+        content="Learn what to check during a forklift pre-operation inspection before using the equipment.">
+    <meta name="author" content="Babalola Gbenga">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/fleet-safe.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>FleetSafe</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="inspection.html">Inspection</a>
+            <a href="safety.html">Safety Tips</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Pre-Operation Forklift Inspection</h2>
+
+        <p>
+            A forklift should be inspected before it is used. Check the equipment
+            carefully and report any defect before operating the forklift.
+        </p>
+        <form id="inspection-form">
+
+            <div class="table-container">
+                <table class="inspection-table">
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>FLT No</th>
+                            <th>Driver Name</th>
+                            <th>Preshift Rating</th>
+                            <th>FLT HR Reading<br>(Morning Shift Only)</th>
+                            <th>Remark</th>
+                            <th>Machine Photo</th>
+                            <th>Supervisor Inspection</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="inspection-table-body">
+                        <!-- JavaScript will create the forklift rows here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="submit">Submit Inspection</button>
+
+        </form>
+
+        <p id="inspection-result"></p>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FleetSafe | Babalola Gbenga</p>
+        <a href="references.html">References</a>
+    </footer>
+
+    <script src="scripts/fleet-safe.js"></script>
+
+</body>
+
+</html>

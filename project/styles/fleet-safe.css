@@ -1,0 +1,433 @@
+
+/* ========================================
+   FLEETSAFE - SITE-WIDE DESIGN
+   Colours: Navy, Safety Yellow, Light Grey
+======================================== */
+
+:root {
+    --navy: #123047;
+    --navy-dark: #0b2030;
+    --navy-light: #234b63;
+    --yellow: #f4c430;
+    --yellow-hover: #dfb21a;
+    --background: #edf2f6;
+    --white: #ffffff;
+    --text: #243746;
+    --muted: #647786;
+    --border: #d8e1e8;
+    --danger: #b42318;
+    --success: #18794e;
+    --shadow: 0 5px 18px rgba(18, 48, 71, 0.08);
+}
+
+/* Basic page layout */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--navy);
+    line-height: 1.25;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+p {
+    margin-top: 0;
+}
+
+/* Header and navigation */
+header {
+    background: linear-gradient(
+        135deg,
+        var(--navy-dark),
+        var(--navy-light)
+    );
+    color: var(--white);
+    padding: 1.5rem 5%;
+    border-bottom: 5px solid var(--yellow);
+}
+
+header h1,
+header h2,
+header p {
+    color: var(--white);
+}
+
+header h1 {
+    margin-bottom: 0.4rem;
+}
+
+nav {
+    background: var(--navy);
+    padding: 0.75rem 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.55rem 0.85rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: var(--yellow);
+    color: var(--navy-dark);
+}
+
+/* Main content */
+main {
+    width: min(1100px, 92%);
+    margin: 2rem auto;
+}
+
+section {
+    margin-bottom: 1.75rem;
+}
+
+/* Cards and content panels */
+.card,
+.dashboard-card,
+.summary-card {
+    background: var(--white);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.card h2,
+.dashboard-card h2,
+.summary-card h2 {
+    border-left: 5px solid var(--yellow);
+    padding-left: 0.75rem;
+}
+
+/* Forms */
+form {
+    background: var(--white);
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b8c7d2;
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--text);
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(244, 196, 48, 0.4);
+    border-color: var(--navy);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Buttons */
+button,
+.button,
+input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    padding: 0.75rem 1.2rem;
+    border: none;
+    border-radius: 7px;
+    background: var(--yellow);
+    color: var(--navy-dark);
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover {
+    background: var(--yellow-hover);
+    transform: translateY(-1px);
+}
+
+button:focus-visible,
+.button:focus-visible {
+    outline: 3px solid var(--navy-light);
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Inspection tables */
+.inspection-table,
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    margin: 1rem 0 1.5rem;
+    border-radius: 8px;
+}
+
+.inspection-table th,
+table th {
+    background: var(--navy);
+    color: var(--white);
+    text-align: left;
+    padding: 12px;
+}
+
+.inspection-table td,
+table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.inspection-table tbody tr:nth-child(even),
+table tbody tr:nth-child(even) {
+    background: #f1f5f8;
+}
+
+.inspection-table tbody tr:hover,
+table tbody tr:hover {
+    background: #fff8dc;
+}
+
+/* Inspection results and status messages */
+.success,
+.success-message {
+    color: var(--success);
+    background: #e8f6ee;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.error,
+.error-message {
+    color: var(--danger);
+    background: #fff0ee;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.warning,
+.warning-message {
+    color: #765600;
+    background: #fff5d6;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Links and footer */
+a {
+    color: #17618a;
+}
+
+a:hover {
+    color: var(--navy-dark);
+}
+
+footer {
+    background: var(--navy-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: 3rem;
+    border-top: 5px solid var(--yellow);
+}
+
+footer p,
+footer a {
+    color: var(--white);
+}
+
+/* Mobile screens */
+@media (max-width: 700px) {
+    nav {
+        padding: 0.75rem 4%;
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        width: 94%;
+        margin: 1.25rem auto;
+    }
+
+    form,
+    .card,
+    .dashboard-card,
+    .summary-card {
+        padding: 1rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    .inspection-table th,
+    .inspection-table td,
+    table th,
+    table td {
+        padding: 8px;
+    }
+}
+
+/* FleetSafe responsive layout */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 12px;
+  }
+
+  header {
+    padding: 18px 12px;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
+  .card {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

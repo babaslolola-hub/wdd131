@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FleetSafe | Supervisor Dashboard</title>
+
+    <meta name="description" content="Review forklift pre-shift inspection reports.">
+
+    <link rel="stylesheet" href="styles/fleet-safe.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>FleetSafe</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="operator-check.html">Operator Check</a>
+            <a href="inspection.html">Supervisor Inspection</a>
+            <a href="supervisor-dashboard.html">Dashboard</a>
+            <a href="safety.html">Safety Tips</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Supervisor Dashboard</h2>
+
+        <p>
+            Review operator pre-shift checks and identify reported defects.
+        </p>
+
+        <button type="button" id="refresh-records">
+            Refresh Records
+        </button>
+
+        <section aria-labelledby="summary-heading">
+            <h3 id="summary-heading">Inspection Summary</h3>
+
+            <p>Total checks: <strong id="total-checks">0</strong></p>
+
+            <p>Checks with reported defects:
+                <strong id="defect-checks">0</strong>
+            </p>
+
+            <p>Checks without reported defects:
+                <strong id="clear-checks">0</strong>
+            </p>
+        </section>
+
+        <section aria-labelledby="records-heading">
+            <h3 id="records-heading">Submitted Operator Checks</h3>
+
+            <p id="empty-message">
+                No operator checks have been saved in this browser yet.
+            </p>
+
+            <div class="table-container">
+                <table class="inspection-table">
+
+                    <thead>
+                        <tr>
+                            <th>Date and Time</th>
+                            <th>Operator</th>
+                            <th>FLT</th>
+                            <th>Result</th>
+                            <th>Defects</th>
+                            <th>Operator Remarks</th>
+                            <th>Checklist Details</th>
+                            <th>Supervisor Status</th>
+                            <th>Supervisor Remarks</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="records-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FleetSafe | Babalola Gbenga</p>
+        <a href="references.html">References</a>
+    </footer>
+
+    <script src="scripts/supervisor-dashboard.js"></script>
+
+</body>
+
+</html>
