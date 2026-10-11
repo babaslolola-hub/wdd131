@@ -154,6 +154,17 @@ machines.forEach(function (machine, index) {
     const driverCell = document.createElement("td");
     const driverSelect = document.createElement("select");
 
+    driverSelect.id = `driver-${machine}`;
+    driverSelect.name = `driver-${machine}`;
+
+    const driverLabel = document.createElement("label");
+    driverLabel.htmlFor = driverSelect.id;
+    driverLabel.textContent = `Driver name for FLT ${machine}`;
+    driverLabel.className = "visually-hidden";
+
+    driverCell.appendChild(driverLabel);
+
+
     const defaultDriver = document.createElement("option");
     defaultDriver.value = "";
     defaultDriver.textContent = "Select driver";
@@ -170,6 +181,16 @@ machines.forEach(function (machine, index) {
     row.appendChild(driverCell);
     const ratingCell = document.createElement("td");
     const ratingSelect = document.createElement("select");
+
+    ratingSelect.id = `rating-${machine}`;
+    ratingSelect.name = `rating-${machine}`;
+
+    const ratingLabel = document.createElement("label");
+    ratingLabel.htmlFor = ratingSelect.id;
+    ratingLabel.textContent = `Preshift rating for FLT ${machine}`;
+    ratingLabel.className = "visually-hidden";
+
+    ratingCell.appendChild(ratingLabel);
 
     const ratings = [
         "Satisfactory",
@@ -194,6 +215,15 @@ machines.forEach(function (machine, index) {
     row.appendChild(ratingCell);
     const hrCell = document.createElement("td");
     const hrInput = document.createElement("input");
+    hrInput.id = `hr-${machine}`;
+    hrInput.name = `hr-${machine}`;
+
+    const hrLabel = document.createElement("label");
+    hrLabel.htmlFor = hrInput.id;
+    hrLabel.textContent = `Hour meter reading for FLT ${machine}`;
+    hrLabel.className = "visually-hidden";
+
+    hrCell.appendChild(hrLabel);
 
     hrInput.type = "number";
     hrInput.step = "0.1";
@@ -204,6 +234,15 @@ machines.forEach(function (machine, index) {
     row.appendChild(hrCell);
     const remarkCell = document.createElement("td");
     const remarkInput = document.createElement("input");
+    remarkInput.id = `remark-${machine}`;
+    remarkInput.name = `remark-${machine}`;
+
+    const remarkLabel = document.createElement("label");
+    remarkLabel.htmlFor = remarkInput.id;
+    remarkLabel.textContent = `Remark for FLT ${machine}`;
+    remarkLabel.className = "visually-hidden";
+
+    remarkCell.appendChild(remarkLabel);
 
     remarkInput.type = "text";
     remarkInput.placeholder = "Enter remark";
@@ -212,6 +251,15 @@ machines.forEach(function (machine, index) {
     row.appendChild(remarkCell);
     const photoCell = document.createElement("td");
     const photoInput = document.createElement("input");
+    photoInput.id = `photo-${machine}`;
+    photoInput.name = `photo-${machine}`;
+
+    const photoLabel = document.createElement("label");
+    photoLabel.htmlFor = photoInput.id;
+    photoLabel.textContent = `Machine photo for FLT ${machine}`;
+    photoLabel.className = "visually-hidden";
+
+    photoCell.appendChild(photoLabel);
 
     photoInput.type = "file";
     photoInput.accept = "image/*";
@@ -221,6 +269,15 @@ machines.forEach(function (machine, index) {
     row.appendChild(photoCell);
     const supervisorCell = document.createElement("td");
     const supervisorSelect = document.createElement("select");
+    supervisorSelect.id = `supervisor-${machine}`;
+    supervisorSelect.name = `supervisor-${machine}`;
+
+    const supervisorLabel = document.createElement("label");
+    supervisorLabel.htmlFor = supervisorSelect.id;
+    supervisorLabel.textContent = `Supervisor inspection status for FLT ${machine}`;
+    supervisorLabel.className = "visually-hidden";
+
+    supervisorCell.appendChild(supervisorLabel);
 
     const supervisorOptions = [
         "Inspected",
